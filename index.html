@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Prompt for AI</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';script-src 'self';style-src 'self';img-src 'self' data:;font-src 'self';base-uri 'self';form-action 'self';">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div id="filePathFormWrapper">
+        <form id="filePathForm">
+            <label for="filePath">Path of src-folder:</label>
+            <input type="text" id="filePath" name="filePath" size="52" readonly>
+            <button type="button" id="browseButton">Select</button>
+            <button id="settingsButton" class="settings-button" type="button">⚙️</button>
+        </form>
+    </div>
+    <div id="promptWrapper">
+        <textarea></textarea>
+        <div id="promptButtons">
+            <div id="copyFeedback"></div>
+            <button id="copyPrompt">Copy Prompt</button>
+        </div>
+    </div>
+
+    <!--Modal: change default start and end-->
+    <form id="settings">
+        <label id="settingsHeader" for="aboveInput">Default-Text inserted above the generated Prompt:</label>
+        <div id="aboveWrapper" class="settingsWrapper">
+            <textarea id="aboveInput" class="settingsInput" name="aboveText" ></textarea>
+        </div>
+        <div id="saveButtonWrapper">
+            <button id="saveButton" class="save-button" type="submit">Save</button>
+        </div>
+    </form>
+</body>
+</html>
